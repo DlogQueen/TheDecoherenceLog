@@ -1,5 +1,5 @@
 ---
-title: TheDecoherenceLog
+title: TheDLog
 emoji: 🧬
 colorFrom: gray
 colorTo: red
