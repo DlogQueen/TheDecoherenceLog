@@ -106,7 +106,7 @@ def load_css(file_name="style.css"):
         text-decoration: none;
     }
     """
-    st.markdown(f'<style>{css}/*cache-buster=4*/</style>', unsafe_allow_html=True)
+    st.markdown(f'<style>{css}/*cache-buster=5*/</style>', unsafe_allow_html=True)
 
 def render_void_intro():
     st.markdown("""
@@ -142,7 +142,7 @@ def render_terminal_boot():
     return placeholder
 
 def get_logo_html(size=40):
-    logo_b64 = get_img_as_base64("logo1.png") or get_img_as_base64("assets/logo.png")
+    logo_b64 = get_img_as_base64("logo1.png")   # deco logo
     if logo_b64:
         return f'<img src="data:image/png;base64,{logo_b64}" width="{size}" style="filter: drop-shadow(0 0 8px #00f2ff);">'
     return "🧬"
