@@ -1,0 +1,1 @@
+Please place your 'logo.png' and 'background.png' files in this directory.

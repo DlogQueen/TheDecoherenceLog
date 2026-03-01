@@ -1,0 +1,107 @@
+/* GLOBAL TERMINAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap');
+
+:root {
+    --neon-cyan: #00f2ff;
+    --glitch-red: #ff0000;
+    --glass-bg: rgba(5, 5, 5, 0.8);
+    --text-primary: #ffffff;
+    --text-dim: #008f99;
+}
+
+body {
+    background-color: #000000;
+    color: var(--text-primary);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* NEON ACCENTS */
+.neon-cyan {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 5px var(--neon-cyan);
+}
+
+.warning-red {
+    color: var(--glitch-red);
+    text-shadow: 0 0 5px var(--glitch-red);
+}
+
+/* GLASSMORPHISM CARDS */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+/* ANIMATIONS */
+@keyframes flicker {
+    0% { opacity: 1; }
+    3% { opacity: 0.4; }
+    6% { opacity: 1; }
+    7% { opacity: 0.4; }
+    8% { opacity: 1; }
+    9% { opacity: 1; }
+    10% { opacity: 0.1; }
+    11% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.glitch-text {
+    animation: flicker 4s infinite;
+    color: var(--glitch-red);
+}
+
+/* SIDEBAR */
+section[data-testid="stSidebar"] {
+    background-color: rgba(5, 5, 5, 0.95);
+    border-right: 1px solid var(--neon-cyan);
+}
+
+/* STREAMLIT BUTTON OVERRIDES */
+div.stButton > button {
+    background-color: rgba(0, 242, 255, 0.05);
+    color: var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
+    font-family: 'Share Tech Mono', monospace;
+    border-radius: 0px;
+    transition: all 0.3s;
+}
+
+div.stButton > button:hover {
+    background-color: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+/* VOID LAYER */
+.void-warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100%;
+}
+
+.void-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--glitch-red);
+    animation: flicker 0.5s infinite;
+    background: black;
+    padding: 40px;
+    border: 2px solid var(--glitch-red);
+    text-align: center;
+    box-shadow: 0 0 20px var(--glitch-red);
+}
