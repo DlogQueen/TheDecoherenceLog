@@ -1,4 +1,3 @@
 streamlit==1.35.0
 supabase==2.4.1
-st-supabase-auth==0.1.1
 Pillow==10.3.0
