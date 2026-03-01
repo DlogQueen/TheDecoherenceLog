@@ -1,14 +1,12 @@
 {
-  "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.py"
-    }
-  ]
+    "builds": [
+        {
+            "src": "app.py",
+            "use": "@vercel/static-build",
+            "config": {
+                "command": "pip install -r requirements.txt && streamlit run app.py --server.headless true --server.port $PORT --server.enableCORS false",
+                "distDir": "static"
+            }
+        }
+    ]
 }
